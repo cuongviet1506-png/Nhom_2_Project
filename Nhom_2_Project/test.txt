@@ -1,0 +1,240 @@
+================ TEST 1 =================
+Đặc điểm:
+- Ma trận đơn vị đơn giản nhất.
+- d_min = 1 nên không phát hiện/sửa được lỗi.
+
+File: test01.in
+1 2 2
+10
+01
+
+File: test01.out
+4
+00
+01
+10
+11
+1
+0
+0
+
+
+================ TEST 2 =================
+Đặc điểm:
+- Mã parity cơ bản.
+- Phát hiện được 1 lỗi.
+
+File: test02.in
+1 2 3
+101
+011
+
+File: test02.out
+4
+000
+011
+101
+110
+2
+1
+0
+
+
+================ TEST 3 =================
+Đặc điểm:
+- Mã Hamming (7,4).
+- Sửa được 1 lỗi.
+
+File: test03.in
+1 4 7
+1000110
+0100101
+0010011
+0001111
+
+File: test03.out
+16
+0000000
+0001111
+0010011
+0011100
+0100101
+0101010
+0110110
+0111001
+1000110
+1001001
+1010101
+1011010
+1100011
+1101100
+1110000
+1111111
+3
+2
+1
+
+
+================ TEST 4 =================
+Đặc điểm:
+- Tất cả bit đều là 1.
+- d_min rất lớn.
+
+File: test04.in
+1 1 5
+11111
+
+File: test04.out
+2
+00000
+11111
+5
+4
+2
+
+
+================ TEST 5 =================
+Đặc điểm:
+- Có dòng toàn 0.
+- Sinh từ mã trùng nhau.
+- d_min = 0.
+
+File: test05.in
+1 2 3
+000
+111
+
+File: test05.out
+4
+000
+111
+000
+111
+0
+-1
+0
+
+
+================ TEST 6 =================
+Đặc điểm:
+- Hai dòng ma trận giống nhau.
+- Không có khả năng phát hiện lỗi.
+
+File: test06.in
+1 2 4
+1100
+1100
+
+File: test06.out
+4
+0000
+1100
+1100
+0000
+0
+-1
+0
+
+
+================ TEST 7 =================
+Đặc điểm:
+- Mode 2.
+- In lời giải đầy đủ.
+
+File: test07.in
+2 2 3
+101
+011
+
+File: test07.out
+MA TRAN SINH G:
+101
+011
+
+DANH SACH CAC TU MA:
+Thong diep u -> Tu ma c = uG -> Trong so
+00 -> 000 -> 0
+01 -> 011 -> 2
+10 -> 101 -> 2
+11 -> 110 -> 2
+
+Vi ma la ma khoi tuyen tinh nen d_min bang trong so nho nhat cua cac tu ma khac 0.
+d_min = 2
+
+Kha nang phat hien loi:
+Ma phat hien duoc toi da d_min - 1 = 2 - 1 = 1 loi.
+
+Kha nang sua loi:
+Ma sua duoc toi da floor((d_min - 1) / 2) = 0 loi.
+--------------------------------
+
+
+================ TEST 8 =================
+Đặc điểm:
+- d_min = 3.
+- Có khả năng sửa 1 lỗi.
+
+File: test08.in
+1 2 6
+111000
+000111
+
+File: test08.out
+4
+000000
+000111
+111000
+111111
+3
+2
+1
+
+
+================ TEST 9 =================
+Đặc điểm:
+- Khoảng cách Hamming rất lớn.
+- Sửa được tới 3 lỗi.
+
+File: test09.in
+1 1 7
+1111111
+
+File: test09.out
+2
+0000000
+1111111
+7
+6
+3
+
+
+================ TEST 10 =================
+Đặc điểm:
+- Nhiều test liên tiếp.
+- Kiểm tra while(cin >> ...).
+
+File: test10.in
+1 2 2
+10
+01
+1 2 3
+101
+011
+
+File: test10.out
+4
+00
+01
+10
+11
+1
+0
+0
+4
+000
+011
+101
+110
+2
+1
+0
