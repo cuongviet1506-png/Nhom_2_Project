@@ -180,9 +180,9 @@ g++ Main.cpp -o Main
 
 ## Chạy với file input/output
 
-- chạy trên cmd
+- chạy trên cmd: 
 Main < Testcase\input > Testcase\output (Ví dụ: Main < Testcase\test01.in > Testcase\test01.out)
-- chạy trên terminal trong vsc
+- chạy trên terminal trong vsc:
 cmd /c "Main < Testcase\test01.in > Testcase\test01.out"
 
 ---
