@@ -168,19 +168,22 @@ Phù hợp với:
 
 ## Compile
 
-g++ main.cpp -o main
+g++ Main.cpp -o Main
 
 ---
 
 ## Chạy bằng terminal
 
-./main
+./Main
 
 ---
 
 ## Chạy với file input/output
 
-./main < input.txt > output.txt
+- chạy trên cmd
+Main < Testcase\input > Testcase\output (Ví dụ: Main < Testcase\test01.in > Testcase\test01.out)
+- chạy trên terminal trong vsc
+cmd /c "Main < Testcase\test01.in > Testcase\test01.out"
 
 ---
 
@@ -218,9 +221,7 @@ g++ main.cpp -o main
 - Mã Hamming (7,4)
 
 ## test04
-- Khoảng cách lớn
-
-## test05
+- Khoảng cách lớn## test05
 - Dòng toàn 0
 
 ## test06
@@ -237,8 +238,3 @@ g++ main.cpp -o main
 
 ## test10
 - Nhiều test liên tiếp
-
----
-
-# Tác giả
-Binary Linear Block Code Simulator using C++
